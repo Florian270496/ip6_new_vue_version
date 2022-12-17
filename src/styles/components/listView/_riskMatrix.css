@@ -1,0 +1,43 @@
+.detail-view__risk-matrix {
+    height: calc(325 * 0.0625rem);
+    width: auto;
+    padding: calc(30 * 0.0625rem);
+    border: calc(1 * 0.0625rem) solid var(--frames-bluegray);
+    border-radius: calc(var(--border-radius) * 0.0625rem);
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .detail-view__risk-matrix {
+        height: auto;
+        padding: 0;
+        border: none;
+    }
+}
+
+.detail-view__risk-matrix-title {
+    font-family: 'OpenSans-SemiBold', sans-serif;
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .detail-view__risk-matrix-title {
+        font-family: 'OpenSans-Regular', sans-serif;
+        text-decoration: underline;
+    }
+}
+
+.detail-view__risk-matrix-description {
+    width: auto;
+    text-align: justify;
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .detail-view__risk-matrix-description {
+        padding: calc(8 * 0.0625rem) 0;
+        border: none;
+        text-align: left;
+    }
+
+    .v-application .detail-view__risk-matrix-description p {
+        margin-left: calc(0 * 0.0625rem);
+    }
+}

@@ -1,0 +1,30 @@
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detail-view__button-container {
+    padding-bottom: calc(var(--margin-one) * 2 * 0.0625rem);
+    padding-top: calc(var(--margin-one) * 2 * 0.0625rem);
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .detail-view__button-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.next-step__button-container {
+    margin-top: calc(var(--margin-one) * 0.0625rem);
+    margin-bottom: calc(var(--margin-one) * 0.0625rem);
+}
+
+.new-hazard__button-container {
+    margin-top: calc(40 * 0.0625rem);
+}
+
+.modal__button-container {
+    display: flex;
+    justify-content: center;
+}

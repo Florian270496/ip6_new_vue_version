@@ -1,0 +1,94 @@
+.path-section {
+    margin-top: calc(var(--margin-one) * 0.0625rem);
+}
+
+.path-section__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'OpenSans-Bold', sans-serif;
+}
+
+.path-section__row--row1 {
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+}
+
+.path-section__row--row2 {
+    margin-top: calc(15 * 0.0625rem);
+}
+
+.path-section__full-path {
+    display: flex;
+}
+
+.path-section__path-element {
+    display: flex;
+}
+
+.path-section__next-arrow {
+    margin-left: calc(15 * 0.0625rem);
+    margin-right: calc(5 * 0.0625rem);
+    display: flex;
+    align-items: center;
+}
+
+.path-section__next-arrow--first-child {
+    margin-left: calc(12 * 0.0625rem);
+}
+
+.path-section__directory {
+    font-family: OpenSans-Bold, serif;
+    opacity: 0.5;
+}
+
+.path-section__risk-priority-legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(21 * 0.0625rem);
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+}
+
+.path-section__risk-priority-legend-element:not(:first-child)  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+    margin-left: calc(9 * 0.0625rem);
+}
+
+.path-section__risk-priority-legend-element:nth-last-child(3) p {
+    margin-top: calc(-2 * 0.0625rem);
+}
+
+.path-section__risk-priority-legend-element p:not(:first-child)  {
+    margin-left: calc(6 * 0.0625rem);
+}
+
+.path-section__title {
+    font-size: calc(14 * 0.0625rem);
+}
+
+@media (max-width: calc(992 * 0.0625em)) {
+    .path-section__row--row1 {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        min-height: calc(50 * 0.0625rem);
+    }
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .path-section__full-path {
+        flex-direction: column;
+        margin-top: calc(15 * 0.0625rem);
+        height: calc(70 * 0.0625rem);
+    }
+
+    .path-section__path-element:not(:first-child) {
+        margin-top: calc(10 * 0.0625rem);
+    }
+
+    .path-section__path-element:not(:first-child) > .path-section__next-arrow {
+        margin-left: 0;
+    }
+}

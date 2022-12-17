@@ -1,0 +1,95 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: OpenSans-SemiBold, serif;
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+    height: calc(38 * 0.0625rem);
+    padding-left: calc(var(--padding-button) * 0.0625rem);
+    padding-right: calc(var(--padding-button) * 0.0625rem);
+    border-radius: calc(50 * 0.0625rem);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.button--submit {
+    background-color: var(--button-blue);
+    color: white;
+    box-shadow: inset 0 0 0 0 var(--notification-blue);
+}
+
+.button--cancel {
+    background-color: var(--frames-bluegray);
+    color: var(--notification-blue);
+    box-shadow: inset 0 0 0 0 #d3d8e1;
+}
+@media (max-width: calc(1079 * 0.0625em)) {
+    .button--cancel {
+        margin-bottom: calc(20 * 0.0625rem);
+        margin-right: 0;
+    }
+}
+
+.button--submit:hover {
+    box-shadow: inset calc(180 * 0.0625rem) 0 0 0 var(--notification-blue);
+}
+
+.button--cancel:hover {
+    box-shadow: inset calc(180 * 0.0625rem) 0 0 0 #d3d8e1;
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .button--detail-view {
+        width: calc(300 * 0.0625rem);
+    }
+}
+
+.button--detail-view-submit {
+    margin-left: calc(20 * 0.0625rem);
+}
+@media (max-width: calc(576 * 0.0625em)) {
+    .button--detail-view-submit {
+        margin-left: 0;
+    }
+    .button--detail-view-submit:hover {
+        box-shadow: inset calc(300 * 0.0625rem) 0 0 0 var(--notification-blue);
+    }
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .button--detail-view-cancel:hover {
+        box-shadow: inset calc(300 * 0.0625rem) 0 0 0 #d3d8e1;
+    }
+}
+
+.button--new-hazard {
+    width: calc(140 * 0.0625rem);
+}
+@media (max-width: calc(1079 * 0.0625em)) {
+    .button--new-hazard {
+        width: calc(330 * 0.0625rem);
+        margin-left: 0;
+    }
+}
+
+.button--new-hazard-cancel {
+    margin-right: calc(20 * 0.0625rem);
+}
+@media (max-width: calc(1079 * 0.0625em)) {
+    .button--new-hazard-cancel {
+        margin-right: 0;
+    }
+    .button--new-hazard-cancel:hover {
+        box-shadow: inset calc(330 * 0.0625rem) 0 0 0 #d3d8e1;
+    }
+}
+
+.button--new-hazard-submit {
+    opacity: 0.4;
+    text-align: center;
+}
+@media (max-width: calc(1079 * 0.0625em)) {
+    .button--new-hazard-submit:hover {
+        box-shadow: inset calc(330 * 0.0625rem) 0 0 0 var(--notification-blue);
+    }
+}

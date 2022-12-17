@@ -1,0 +1,282 @@
+.hazard-table {
+    margin-top: calc(var(--margin-one) * 0.0625rem);
+}
+
+th:not(:nth-last-child(4), :nth-last-child(5))  {
+    width: 7%;
+}
+
+th:nth-last-child(5) {
+    width: 12%;
+}
+
+th:nth-last-child(4) {
+    width: 60%;
+}
+
+/* Table fonts */
+th span, .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+    font-family: OpenSans-Regular, serif;
+}
+
+/* Remove unused margin */
+.v-application--wrap {
+    min-height: 0;
+}
+
+/* Search Field Space */
+.v-text-field {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.v-application--wrap > .theme--light.v-text-field > .v-input__control > .v-input__slot {
+    border: calc(1.25 * 0.0625rem) solid var(--frames-bluegray);
+    border-radius: calc(4 * 0.0625rem);
+    margin-bottom: calc(10 * 0.0625rem);
+}
+
+.v-input__append-inner {
+    margin-right: calc(5 * 0.0625rem);
+}
+
+.v-input__slot {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Search Field Border Color */
+.theme--light.v-text-field > .v-input__control > .v-input__slot::before {
+    border: none;
+}
+
+.v-text-field > .v-input__control > .v-input__slot::after {
+    border-color: var(--notification-blue) !important;
+
+}
+
+/* color "suchen" */
+.theme--light.v-label {
+    color: var(--notification-blue);
+    opacity: 0.8;
+}
+
+/* Table Header */
+.theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+    color: var(--notification-blue);
+}
+
+.theme--light.v-data-table .v-data-table-header th.sortable:hover, .theme--light.v-data-table .v-data-table-header th.sortable.active {
+    color: var(--button-blue);
+}
+
+/* Hovered-selected-row */
+tr:hover:not(.v-data-table__expanded__content):not(thead tr), .v-data-table__expanded__row {
+    background: var(--frames-bluegray) !important;
+}
+
+/* Selected Row */
+.v-data-table__expanded__row > td {
+    font-weight: bold;
+}
+
+.v-data-table__expanded__row > td div.tooltip {
+    font-weight: normal;
+}
+
+/* Remove background of expand-icon */
+.v-icon.v-icon::after {
+    background-color: transparent;
+}
+
+/* Color Vuetify-Icons */
+.mdi::before, .mdi-set, .v-icon.v-icon {
+    color: var(--notification-blue);
+}
+
+
+/* Table Expanded */
+.v-data-table > .v-data-table__wrapper > table > tbody > tr > .detail-view {
+    padding: 0;
+}
+
+.detail-view__groups {
+    padding: 0 calc(40 * 0.0625rem);
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .detail-view__groups {
+        padding: calc(20 * 0.0625rem);
+    }
+}
+
+.detail-view__groups--description-icon {
+    padding-top: calc(18 * 0.0625rem);
+    padding-bottom: calc(18 * 0.0625rem);
+    display: flex;
+    justify-content: center;
+    border-bottom: calc(1 * 0.0625rem) solid var(--frames-bluegray);
+}
+
+@media (max-width: calc(768 * 0.0625em)) {
+    .detail-view__groups--description-icon {
+        justify-content: left;
+    }
+}
+
+.detail-view__groups--custom-made-device {
+    color: var(--notification-blue);
+    padding: calc(20 * 0.0625rem) calc(40 * 0.0625rem);
+    padding-bottom: calc(0 * 0.0625rem);
+    border-left: calc(1.5 * 0.0625rem) solid var(--notification-blue);
+    border-right: calc(1.5 * 0.0625rem) solid var(--notification-blue);
+}
+
+.detail-view__group, .v-text-field.v-text-field--enclosed {
+    padding-bottom: calc(36 * 0.0625rem);
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+}
+
+.detail-view__group--damage {
+    padding-top: calc(18 * 0.0625rem);
+}
+
+.detail-view__group--square {
+    min-height: calc(230 * 0.0625rem);
+    width: calc(250 * 0.0625rem);
+    padding: calc(10 * 0.0625rem) calc(30 * 0.0625rem);
+    background: var(--frames-bluegray);
+    border-radius: calc(var(--border-radius) * 0.0625rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.detail-view__title {
+    font-family: 'OpenSans-SemiBold', sans-serif;
+}
+
+.detail-view__title--square {
+    font-family: 'OpenSans-SemiBold', sans-serif;
+    text-align: center;
+}
+
+.detail-view__content {
+    padding-left: calc(40 * 0.0625rem);
+    padding-top: calc(8 * 0.0625rem);
+    display: flex;
+}
+
+@media (max-width: calc(576 * 0.0625em)) {
+    .detail-view__content {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: calc(1058 * 0.0625em)) {
+    .detail-view__content--question {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.detail-view__content--square {
+    padding: 0;
+}
+
+.detail-view__content--graphic {
+    padding-top: calc(12 * 0.0625rem);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+.detail-view__content li:not(:first-child) {
+    margin-top: calc(10 * 0.0625rem);
+}
+
+.v-application ul, .v-application ol {
+    padding-left: 0;
+}
+
+.v-application p {
+    margin-bottom: 0;
+    margin-left: calc(10 * 0.0625rem);
+}
+
+.detail-view__evaluation-question {
+    width: calc(600 * 0.0625rem);
+}
+
+@media (max-width: calc(1058 * 0.0625em)) {
+    .detail-view__evaluation-question {
+        width: auto;
+    }
+}
+
+.detail-view__evaluation-answer-label {
+    width: calc(150 * 0.0625rem);
+}
+
+@media (max-width: calc(1058 * 0.0625em)) {
+    .detail-view__evaluation-answer-label:nth-last-child(2){
+        margin-top: calc(20 * 0.0625rem);
+    }
+    .detail-view__evaluation-answer-label:nth-last-child(1){
+        margin-top: calc(10 * 0.0625rem);
+    }
+}
+
+.detail-view__evaluation-answer-text {
+    margin-top: calc(-2 * 0.0625rem);
+    margin-left: calc(10 * 0.0625rem);
+}
+
+.detail-view__notification {
+    background-color: var(--frames-bluegray);
+    min-height: calc(30 * 0.0625rem);
+    height: auto;
+    padding: calc(8 * 0.0625rem) calc(12 * 0.0625rem);
+    width: 100%;
+    border-radius: calc(var(--border-radius) * 0.0625rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset, .v-text-field--outlined fieldset {
+    border: calc(1 * 0.0625rem) solid var(--frames-bluegray);
+}
+
+.v-text-field--outlined.v-input--is-focused fieldset {
+    border: calc(2 * 0.0625rem) solid var(--frames-bluegray);
+}
+
+.v-input__slot {
+    margin-bottom: 0;
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+}
+
+textarea, .v-label {
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+}
+
+textarea {
+    padding: calc(10 * 0.0625rem);
+}
+
+.v-text-field__details {
+    display: none;
+}
+
+.v-data-table > .v-data-table__wrapper tbody tr.v-data-table__expanded__content {
+    box-shadow: 0 calc(4 * 0.0625rem) calc(4 * 0.0625rem) var(--frames-bluegray);
+}

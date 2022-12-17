@@ -1,0 +1,20 @@
+.dot {
+    height: calc(21 * 0.0625rem);
+    width: calc(21 * 0.0625rem);
+    border-radius: 50%;
+}
+
+.green-customized {
+    background-color: var(--risk-priority-green);
+    opacity: var(--color-opacity);
+}
+
+.yellow-customized {
+    background-color: var(--risk-priority-yellow);
+    opacity: var(--color-opacity);
+}
+
+.red-customized {
+    background-color: var(--risk-priority-red);
+    opacity: var(--color-opacity);
+}

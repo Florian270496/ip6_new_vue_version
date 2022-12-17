@@ -1,0 +1,24 @@
+[type="checkbox"] + label {
+    position: relative;
+}
+
+[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+}
+
+[type="checkbox"] + label::before {
+    width: calc(15 * 0.0625rem);
+    height: calc(15 * 0.0625rem);
+    background-image: url("../../assets/svg/checkbox_unchecked.svg");
+    display: block;
+    content: "";
+    float: left;
+    margin-right: calc(5 * 0.0625rem);
+    z-index: 0;
+    position: relative;
+}
+
+[type="checkbox"]:checked + label::before {
+    background-image: url("../../assets/svg/checkbox_checked.svg");
+}

@@ -1,0 +1,93 @@
+/* Tooltip default settings */
+.tooltip {
+    position: relative;
+    z-index: 1;
+}
+
+.tooltip:before,
+.tooltip:after {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+/* Tooltip expand settings */
+.tooltip--expand:before {
+    transform: scale3d(.2, .2, 1);
+    transition: all .2s ease-in-out;
+}
+
+.tooltip--expand:after {
+    transform: translate3d(0, calc(6 * 0.0625rem), 0);
+    transition: all .1s ease-in-out;
+}
+
+.tooltip--expand:hover:before,
+.tooltip--expand:hover:after {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+.tooltip--expand:hover:after {
+    transition: all .2s .1s ease-in-out;
+}
+
+
+/* Tooltip after-effect */
+tr td.td_detailView .tooltip:after, tr > td.text-start > .tooltip:after, .tooltip--new-hazard:after {
+    border-right: calc(6 * 0.0625rem) solid transparent;
+    border-left: calc(6 * 0.0625rem) solid transparent;
+    content: '';
+    left: calc(5 * 0.0625rem);
+    top: calc(21 * 0.0625rem);
+}
+
+tr td.td_detailView .tooltip:after, tr:not(:last-child, :nth-last-child(2)) > td.text-start > .tooltip:after, .tooltip--new-hazard:after {
+    border-bottom: calc(6 * 0.0625rem) solid var(--notification-blue);
+}
+
+tr:last-child > td.text-start > .tooltip:after, tr:nth-last-child(2) > td.text-start > .tooltip:after {
+    border-top: calc(6 * 0.0625rem) solid var(--notification-blue);
+    top: calc(-7 * 0.0625rem);
+}
+
+.tooltip--new-hazard:after {
+    left: calc(17 * 0.0625rem);
+}
+
+/* Tooltip before-effects */
+.tooltip:before {
+    background: var(--notification-blue);
+    color: #fff;
+    border-radius: calc(var(--border-radius) * 0.0625rem);
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+    content: attr(data-title);
+    padding: calc(6 * 0.0625rem) calc(10 * 0.0625rem);
+    top: calc(26 * 0.0625rem);
+    left: calc(-40 * 0.0625rem);
+    width: calc(150 * 0.0625rem);
+}
+
+tr:last-child > td.text-start > .tooltip:before, tr:nth-last-child(2) > td.text-start > .tooltip:before {
+    top: calc(-109 * 0.0625rem);
+}
+
+.tooltip--new-hazard:before {
+    left: calc(-23 * 0.0625rem);
+}
+
+
+/* Tooltip risk-matrix */
+#tooltip {
+    position: absolute;
+    z-index: 1;
+    border-radius: calc(var(--border-radius) * 0.0625rem);
+    border-top-left-radius: 0;
+    background: var(--notification-blue);
+    box-sizing: border-box;
+    color: #fff;
+    padding: calc(6 * 0.0625rem);
+    cursor: pointer;
+    display: none;
+}

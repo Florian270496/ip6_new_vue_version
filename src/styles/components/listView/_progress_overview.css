@@ -1,0 +1,30 @@
+.progress-overview {
+    display: flex;
+    flex-direction: column;
+    font-size: calc(var(--main-font-size) * 0.0625rem);
+    margin-top: calc(var(--margin-one) * 0.0625rem);
+    padding: calc(24 * 0.0625rem) calc(16 * 0.0625rem);
+    border: calc(1 * 0.0625rem) solid #E1E5EB;
+    border-radius: calc(var(--border-radius) * 0.0625rem);
+}
+
+.progress-overview__title {
+    color: var(--notification-blue);
+}
+
+.progress-overview__bar {
+    height: calc(17 * 0.0625rem);
+    margin-top: calc(20 * 0.0625rem);
+    background-color: var(--frames-bluegray);
+    border-radius: calc(var(--border-radius--progress-bar) * 0.0625rem);
+}
+
+.progress-overview__progress-in-percent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--notification-blue);
+    border-radius: calc(var(--border-radius--progress-bar) * 0.0625rem);
+    color: white;
+}

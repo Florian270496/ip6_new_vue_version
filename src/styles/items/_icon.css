@@ -1,0 +1,72 @@
+.hazard-table__hazard-icon {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.5);
+}
+
+.hazard-table__hazard-icon:hover {
+    transform: scale(2.5);
+}
+
+.hazard-table__accepted-status {
+    z-index: 0;
+}
+
+.new-hazard__info-icon {
+    margin: 0 calc(20 * 0.0625rem);
+    position: absolute;
+    z-index: 0;
+}
+
+.new-hazard__add-icon {
+    cursor: pointer;
+}
+
+
+/* Shake-effect */
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(calc(-1 * 0.0625rem), 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(calc(2 * 0.0625rem), 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(calc(-4 * 0.0625rem), 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(calc(4 * 0.0625rem), 0, 0);
+    }
+}
+
+.apply-shake {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+/* Turn-resize-effect */
+@keyframes turn-resize{
+    10%, 90% {
+        transform: scale(1.3) rotateY(36deg);
+    }
+
+    20%, 80% {
+        transform: scale(1.6) rotateY(72deg);
+    }
+
+    30%, 70% {
+        transform: scale(1.9) rotateY(108deg);
+    }
+
+    40%, 60% {
+        transform: scale(2.2) rotateY(144deg);
+    }
+    50% {
+        transform: scale(2.5) rotateY(180deg);;
+    }
+}
+
+.apply-resize {
+    animation: turn-resize 1s infinite linear
+}

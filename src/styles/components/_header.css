@@ -1,0 +1,130 @@
+.header {
+    font-size: calc(14 * 0.0625rem);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-darkblue);
+    color: white;
+    height: calc(72 * 0.0625rem);
+    padding-left: calc(var(--padding-wrapper-header) * 0.0625rem);
+    padding-right: calc(var(--padding-wrapper-header) * 0.0625rem);
+}
+
+.header a {
+    color: white;
+}
+
+.header__logo-title {
+    margin: calc(8 * 0.0625rem);
+    margin-left: 0;
+    align-items: center;
+    display: flex;
+}
+
+.header__logo {
+    float: left;
+    margin-right: calc(9 * 0.0625rem);
+}
+
+.header__title {
+    font-size: calc(28 * 0.0625rem);
+    float: left;
+    margin-top: calc(-5 * 0.0625rem);
+}
+
+.header__title-font-size {
+    font-family: 'Oswald', sans-serif;
+}
+
+.header__links {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.header__links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header__links li {
+    list-style: none;
+}
+
+.header__links li a {
+    text-decoration: none;
+    padding: calc(16 * 0.0625rem);;
+    display: block;
+    width: 100%;
+}
+
+.header__links li:hover a {
+    background-color: var(--notification-blue);
+    border-radius: calc(var(--border-radius) * 0.0625rem);
+}
+
+.header__toggle-button {
+    position: absolute;
+    top: calc(20 * 0.0625rem);
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(30 * 0.0625rem);
+    height: calc(21 * 0.0625rem);
+}
+
+.header__toggle-button .header__bar {
+    height: calc(3 * 0.0625rem);
+    width: 100%;
+    background-color: white;
+    border-radius: calc(10 * 0.0625rem);;
+}
+
+
+@media (max-width: calc(1200 * 0.0625em)) {
+    .header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header__logo-title {
+        margin-left: calc(16 * 0.0625rem);
+    }
+
+    .header__toggle-button {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .header__links {
+        display: none;
+        width: 100%;
+        background-color: var(--header-darkblue);
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .header__links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header__links li {
+        text-align: center;
+    }
+
+    .header__links li a {
+        padding: calc(8 * 0.0625rem) calc(16 * 0.0625rem);
+    }
+
+    .header__links.navMobileActive {
+        display: flex;
+    }
+}
