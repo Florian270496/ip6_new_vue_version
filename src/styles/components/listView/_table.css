@@ -37,6 +37,10 @@ th span, .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
     margin-bottom: calc(10 * 0.0625rem);
 }
 
+.v-text-field__slot{
+    margin-left: calc(-24 * 0.0625rem)
+}
+
 .v-input__append-inner {
     margin-right: calc(5 * 0.0625rem);
 }
@@ -53,7 +57,6 @@ th span, .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
 
 .v-text-field > .v-input__control > .v-input__slot::after {
     border-color: var(--notification-blue) !important;
-
 }
 
 /* color "suchen" */
@@ -91,8 +94,13 @@ tr:hover:not(.v-data-table__expanded__content):not(thead tr), .v-data-table__exp
 }
 
 /* Color Vuetify-Icons */
-.mdi::before, .mdi-set, .v-icon.v-icon {
-    color: var(--notification-blue);
+.mdi::before, .mdi-set, .v-icon.v-icon, v-application .primary--text {
+    color: var(--notification-blue) !important;
+}
+
+/* Not show search-icon */
+.v-input__icon--append .material-icons{
+    display: none !important;
 }
 
 

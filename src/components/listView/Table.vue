@@ -3,6 +3,7 @@
     <v-app id="inspire">
       <v-text-field
           append-icon="search"
+          append-outer-icon="red"
           v-model="search"
           label="Suchen"
           single-line
